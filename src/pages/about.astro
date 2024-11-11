@@ -1,0 +1,385 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+---
+
+<Layout title="About | collectif">
+	<main>
+		<article class="about-article">
+			<header class="article-header">
+				<div class="meta">
+					<span class="category">About</span>
+				</div>
+				<h1>About collectif</h1>
+			</header>
+
+			<div class="article-content">
+				<div class="article-image">
+					<div class="cyber-image">
+						<div class="glitch-effect"></div>
+						<div class="image-overlay"></div>
+					</div>
+				</div>
+
+				<p class="lead">We operate in the shadows to bring light to the truth.</p>
+
+				<h2>Our Mission</h2>
+				<p>collectif is an underground intelligence network dedicated to exposing corruption, manipulation, and exploitation in the Web3 space. We believe in radical transparency and the power of anonymous whistleblowers.</p>
+
+				<div class="article-image">
+					<div class="cyber-image mission">
+						<div class="glitch-effect"></div>
+						<div class="image-overlay"></div>
+					</div>
+				</div>
+
+				<h2>Our Methods</h2>
+				<ul>
+					<li>Anonymous sources protection</li>
+					<li>Deep technical analysis</li>
+					<li>Independent investigations</li>
+					<li>Zero compromise on truth</li>
+				</ul>
+
+				<blockquote>
+					Truth is found in the darkest corners of the digital realm.
+				</blockquote>
+
+				<h2>Secure Communication</h2>
+				<p>For secure communication and whistleblowing, use our PGP key:</p>
+				<pre class="pgp-key">-----BEGIN PGP PUBLIC KEY BLOCK-----
+mQINBGXLcK4BEAC7U+K5gHV+0cKqPV8yH/Sq8GXxM+7P+1XxM9xv1u7Zj8xN
+9zF4kz9JH2k5Yx+9YqTjTzKr1YJ8xK9YZLRWPvzz8NKTqF5RG9Zw1MH9ZQVY
+KvL8cx+EnqVs7GMRz8z8fjqXHWPX9KeU5g9Nk8Pu8NEw4XUr5Tb8mvqw3L8j
+Kj9N3XrezFm8eLzGcgq4C5L5DCv+Y4X9WSz2Q3Rw9ZF5kZ7jY5qX+UF9jYJ2
+IVW8ECZr1wHxv3rNpR9KJ5VQhPX9KX5Gq9vJ8Qh9nR0P7RX9QHh9uW9bhDBE
+T4L97MaJP3WYlxmPL8dKiHB0qF5ZF5qE3wIDAQAB
+-----END PGP PUBLIC KEY BLOCK-----</pre>
+				<p class="key-fingerprint">Key fingerprint: 4A92 1F5B 6C93 4E8D 9B2F  7A1E 8D5C 6B4A 3F2D 1E9C</p>
+
+				<h2>Our Values</h2>
+				<div class="values-grid">
+					<div class="value-item">
+						<h3>Radical Transparency</h3>
+						<p>We believe in exposing the truth, no matter how uncomfortable or inconvenient it may be.</p>
+					</div>
+
+					<div class="value-item">
+						<h3>Source Protection</h3>
+						<p>The safety and anonymity of our sources is our highest priority. We employ advanced security measures to protect whistleblowers.</p>
+					</div>
+
+					<div class="value-item">
+						<h3>Technical Integrity</h3>
+						<p>Our investigations are backed by rigorous technical analysis and verifiable evidence.</p>
+					</div>
+
+					<div class="value-item">
+						<h3>Independence</h3>
+						<p>We remain free from corporate influence and financial pressures. Our only allegiance is to the truth.</p>
+					</div>
+
+					<div class="value-item">
+						<h3>Decentralization</h3>
+						<p>We believe in distributing power and dismantling centralized control structures that enable corruption.</p>
+					</div>
+
+					<div class="value-item">
+						<h3>Community First</h3>
+						<p>Our mission serves the broader Web3 community, protecting users from exploitation and manipulation.</p>
+					</div>
+				</div>
+
+				<div class="article-image">
+					<div class="cyber-image values">
+						<div class="glitch-effect"></div>
+						<div class="image-overlay"></div>
+					</div>
+				</div>
+
+				<h2>Our Promise</h2>
+				<p>We will never:</p>
+				<ul>
+					<li>Reveal our sources</li>
+					<li>Accept bribes or hush money</li>
+					<li>Bow to corporate pressure</li>
+					<li>Compromise on our values</li>
+				</ul>
+			</div>
+		</article>
+	</main>
+</Layout>
+
+<style>
+	main {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 4rem 2rem;
+	}
+
+	.about-article {
+		position: relative;
+	}
+
+	.article-header {
+		margin-bottom: 4rem;
+		text-align: center;
+	}
+
+	.meta {
+		color: var(--accent);
+		font-family: 'Space Mono', monospace;
+		font-size: 0.9rem;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+
+	h1 {
+		font-size: 3rem;
+		line-height: 1.2;
+		margin-bottom: 2rem;
+		color: var(--text);
+		text-shadow: 0 0 20px rgba(0, 255, 102, 0.1);
+	}
+
+	.article-content {
+		font-size: 0.9rem;
+		line-height: 1.6;
+		color: var(--text);
+	}
+
+	.lead {
+		font-size: 1.3rem;
+		color: var(--text);
+		font-weight: 500;
+		border-left: 4px solid var(--accent);
+		padding-left: 1rem;
+		margin: 2rem 0;
+	}
+
+	h2 {
+		color: var(--accent);
+		font-size: 1.2rem;
+		margin: 2rem 0 1rem;
+	}
+
+	p {
+		margin-bottom: 1.5rem;
+		opacity: 0.9;
+	}
+
+	ul {
+		list-style: none;
+		padding: 0;
+		margin: 1rem 0 2rem;
+	}
+
+	li {
+		margin-bottom: 0.5rem;
+		padding-left: 1.5rem;
+		position: relative;
+		opacity: 0.9;
+	}
+
+	li::before {
+		content: '>';
+		position: absolute;
+		left: 0;
+		color: var(--accent);
+	}
+
+	blockquote {
+		border-left: 4px solid var(--accent);
+		margin: 2rem 0;
+		padding-left: 1.5rem;
+		font-style: italic;
+		position: relative;
+	}
+
+	blockquote::before {
+		content: '';
+		position: absolute;
+		left: -4px;
+		top: 0;
+		bottom: 0;
+		width: 4px;
+		background: var(--accent);
+		animation: glow-line 2s ease-in-out infinite;
+	}
+
+	.pgp-key {
+		background: var(--secondary);
+		padding: 1rem;
+		border: 1px solid var(--accent);
+		font-family: monospace;
+		font-size: 0.8rem;
+		overflow-x: auto;
+		margin: 1rem 0;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+
+	.key-fingerprint {
+		font-family: monospace;
+		color: var(--accent);
+		font-size: 0.8rem;
+		margin-top: 0.5rem;
+	}
+
+	.values-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		gap: 2rem;
+		margin: 2rem 0;
+	}
+
+	.value-item {
+		background: rgba(26, 26, 26, 0.5);
+		padding: 1.5rem;
+		border: 1px solid var(--secondary);
+		transition: all 0.3s ease;
+	}
+
+	.value-item:hover {
+		border-color: var(--accent);
+		transform: translateY(-2px);
+	}
+
+	.value-item h3 {
+		color: var(--accent);
+		font-size: 1.1rem;
+		margin-bottom: 1rem;
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+	}
+
+	.value-item h3::before {
+		content: '>';
+		color: var(--accent);
+		font-family: monospace;
+	}
+
+	.value-item p {
+		font-size: 0.9rem;
+		margin: 0;
+		opacity: 0.8;
+	}
+
+	@keyframes glow-line {
+		0%, 100% {
+			box-shadow: 0 0 5px var(--accent);
+		}
+		50% {
+			box-shadow: 0 0 15px var(--accent);
+		}
+	}
+
+	.article-image {
+		width: 100%;
+		height: 300px;
+		margin: 2rem 0;
+		position: relative;
+		overflow: hidden;
+		border-radius: 8px;
+		border: 1px solid var(--secondary);
+	}
+
+	.cyber-image {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cyber-image::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: 
+			linear-gradient(45deg, transparent 48%, var(--accent) 50%, transparent 52%),
+			linear-gradient(-45deg, transparent 48%, var(--accent) 50%, transparent 52%);
+		background-size: 4px 4px;
+		opacity: 0.3;
+	}
+
+	.glitch-effect {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			transparent 0%,
+			rgba(0, 255, 102, 0.2) 50%,
+			transparent 100%
+		);
+		animation: glitch 2s infinite;
+		opacity: 0.5;
+	}
+
+	.image-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(
+			circle at center,
+			transparent 0%,
+			rgba(0, 0, 0, 0.8) 100%
+		);
+	}
+
+	@keyframes glitch {
+		0% {
+			transform: translateY(-100%);
+		}
+		100% {
+			transform: translateY(100%);
+		}
+	}
+
+	.mission::after {
+		content: '[ OUR MISSION ]';
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		color: var(--accent);
+		font-family: 'Space Mono', monospace;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.values::after {
+		content: '[ OUR VALUES ]';
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		color: var(--accent);
+		font-family: 'Space Mono', monospace;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	@media (max-width: 768px) {
+		main {
+			padding: 2rem 1rem;
+		}
+
+		h1 {
+			font-size: 2rem;
+		}
+
+		.values-grid {
+			grid-template-columns: 1fr;
+		}
+	}
+</style>

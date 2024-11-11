@@ -1,0 +1,119 @@
+---
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <title>{title}</title>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="admin-wrapper">
+      <header class="admin-header">
+        <nav>
+          <div class="nav-left">
+            <a href="/admin" class="logo">collectif_admin</a>
+          </div>
+          <div class="nav-right">
+            <a href="/admin/profile">Profile</a>
+            <form action="/api/auth/logout" method="POST" class="logout-form">
+              <button type="submit">Logout</button>
+            </form>
+          </div>
+        </nav>
+      </header>
+
+      <slot />
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --background: #0a0a0a;
+    --text: #e0e0e0;
+    --accent: #00ff66;
+    --accent-light: #7dffb3;
+    --accent-dark: #00802b;
+    --secondary: #1a1a1a;
+    --danger: #ff0044;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  html {
+    font-family: 'Space Mono', monospace;
+    background: var(--background);
+    color: var(--text);
+  }
+
+  .admin-wrapper {
+    min-height: 100vh;
+  }
+
+  .admin-header {
+    background: var(--secondary);
+    border-bottom: 1px solid var(--accent);
+    padding: 1rem 2rem;
+  }
+
+  nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+  }
+
+  .nav-right {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+  }
+
+  .nav-right a {
+    color: var(--text);
+    text-decoration: none;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+  }
+
+  .nav-right a:hover {
+    opacity: 1;
+    color: var(--accent);
+  }
+
+  .logout-form button {
+    background: var(--danger);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    font-family: inherit;
+    transition: all 0.3s ease;
+  }
+
+  .logout-form button:hover {
+    background: #cc0033;
+    box-shadow: 0 0 15px var(--danger);
+  }
+</style>

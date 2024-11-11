@@ -1,0 +1,152 @@
+---
+import ArticleLayout from '../../layouts/ArticleLayout.astro';
+---
+
+<ArticleLayout
+	title="BREAKING: $150M Protocol Breach"
+	date="2024-01-15"
+	readingTime="8 min read"
+	status="live"
+>
+	<div class="article-image">
+		<div class="cyber-image">
+			<div class="glitch-effect"></div>
+			<div class="image-overlay"></div>
+		</div>
+	</div>
+	
+	<p class="lead">In what appears to be one of the most sophisticated attacks in DeFi history, an unknown group has successfully exploited multiple vulnerabilities in the <span class="redacted">████████</span> protocol, making off with approximately $150 million in user funds.</p>
+
+	<h2>The Initial Breach</h2>
+	<p>Our investigation reveals that the attack was not a simple smart contract exploitation, but rather a carefully orchestrated operation that had been in preparation for months. Through exclusive access to internal logs and communications from <span class="redacted">██████</span>, we can now piece together the sequence of events that led to this massive security breach.</p>
+
+	<div class="article-image">
+		<div class="cyber-image attack-vector">
+			<div class="glitch-effect"></div>
+			<div class="image-overlay"></div>
+		</div>
+	</div>
+
+	<h2>Technical Analysis</h2>
+	<p>The attackers leveraged a previously unknown vulnerability in the protocol's <span class="redacted">███████████</span> system, combined with a precision-timed manipulation of the protocol's oracle data. Our technical analysis shows:</p>
+
+	<ul>
+		<li>Multiple attack vectors were used simultaneously</li>
+		<li>Custom-built tools were deployed to automate the exploitation</li>
+		<li>The attackers had intimate knowledge of the protocol's architecture</li>
+	</ul>
+
+	<h2>The Aftermath</h2>
+	<div class="article-image">
+		<div class="cyber-image aftermath">
+			<div class="glitch-effect"></div>
+			<div class="image-overlay"></div>
+		</div>
+	</div>
+	
+	<p>In the hours following the attack, our team traced the movement of funds through <span class="redacted">████</span> and <span class="redacted">██████</span> mixing services. The pattern suggests this wasn't just a typical hack, but potentially an inside job with significant planning and resources behind it.</p>
+
+	<blockquote>
+		"This level of sophistication suggests either insider knowledge or months of preparation. The timing and execution were too perfect to be coincidental." - Anonymous Security Researcher
+	</blockquote>
+
+	<h2>Ongoing Investigation</h2>
+	<p>Our team continues to monitor the situation and track the movement of stolen funds. We are in contact with several anonymous sources close to the protocol who have provided additional documentation that we are currently verifying.</p>
+
+	<p>This is a developing story. Check back for updates as our investigation continues.</p>
+</ArticleLayout>
+
+<style>
+	.article-image {
+		width: 100%;
+		height: 300px;
+		margin: 2rem 0;
+		position: relative;
+		overflow: hidden;
+		border-radius: 8px;
+		border: 1px solid var(--accent);
+	}
+
+	.cyber-image {
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+		position: relative;
+		overflow: hidden;
+	}
+
+	.cyber-image::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: 
+			linear-gradient(45deg, transparent 48%, var(--text) 50%, transparent 52%),
+			linear-gradient(-45deg, transparent 48%, var(--text) 50%, transparent 52%);
+		background-size: 4px 4px;
+		opacity: 0.3;
+	}
+
+	.glitch-effect {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: linear-gradient(
+			transparent 0%,
+			rgba(255, 255, 255, 0.1) 50%,
+			transparent 100%
+		);
+		animation: glitch 2s infinite;
+		opacity: 0.5;
+	}
+
+	.image-overlay {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: radial-gradient(
+			circle at center,
+			transparent 0%,
+			rgba(0, 0, 0, 0.8) 100%
+		);
+	}
+
+	@keyframes glitch {
+		0% {
+			transform: translateY(-100%);
+		}
+		100% {
+			transform: translateY(100%);
+		}
+	}
+
+	.attack-vector::after {
+		content: '[ ATTACK VECTOR ANALYSIS ]';
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		color: var(--text);
+		font-family: 'Space Mono', monospace;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+
+	.aftermath::after {
+		content: '[ INCIDENT AFTERMATH ]';
+		position: absolute;
+		bottom: 20px;
+		left: 20px;
+		color: var(--text);
+		font-family: 'Space Mono', monospace;
+		font-size: 0.8rem;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+	}
+</style>

@@ -1,0 +1,78 @@
+/* Article-specific styles */
+.lead {
+	font-size: 1.3rem;
+	color: var(--text);
+	font-weight: 500;
+	border-left: 4px solid var(--accent);
+	padding-left: 1rem;
+	margin: 2rem 0;
+}
+
+.technical-details {
+	background: rgba(0, 255, 102, 0.05);
+	border: 1px solid var(--accent);
+	padding: 2rem;
+	border-radius: 8px;
+	margin: 2rem 0;
+}
+
+.warning-box {
+	background: rgba(255, 0, 68, 0.1);
+	border: 1px solid var(--danger);
+	padding: 1.5rem;
+	border-radius: 8px;
+	margin: 2rem 0;
+}
+
+.code-block {
+	background: #1a1a1a;
+	padding: 1.5rem;
+	border-radius: 8px;
+	overflow-x: auto;
+	margin: 2rem 0;
+	border: 1px solid var(--secondary);
+}
+
+.timeline {
+	border-left: 2px solid var(--accent);
+	padding-left: 2rem;
+	margin: 2rem 0;
+}
+
+.timeline-item {
+	position: relative;
+	margin-bottom: 2rem;
+}
+
+.timeline-item::before {
+	content: '';
+	position: absolute;
+	left: -2.4rem;
+	top: 0.5rem;
+	width: 0.8rem;
+	height: 0.8rem;
+	background: var(--accent);
+	border-radius: 50%;
+}
+
+.data-table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 2rem 0;
+}
+
+.data-table th,
+.data-table td {
+	padding: 1rem;
+	border: 1px solid var(--secondary);
+	text-align: left;
+}
+
+.data-table th {
+	background: rgba(0, 255, 102, 0.1);
+	color: var(--accent);
+}
+
+.data-table tr:hover {
+	background: rgba(0, 255, 102, 0.05);
+}

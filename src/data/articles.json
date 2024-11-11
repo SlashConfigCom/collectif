@@ -1,0 +1,34 @@
+{
+  "articles": [
+    {
+      "slug": "protocol-heist",
+      "title": "BREAKING: $150M Protocol Breach",
+      "date": "2024-01-15",
+      "author": "Anonymous",
+      "status": "live",
+      "category": "Breaking",
+      "readingTime": "8 min read",
+      "content": "..."
+    },
+    {
+      "slug": "surveillance-state",
+      "title": "The Surveillance State of Web3",
+      "date": "2024-01-12",
+      "author": "Anonymous",
+      "status": "updated",
+      "category": "Privacy",
+      "readingTime": "12 min read",
+      "content": "..."
+    },
+    {
+      "slug": "vc-rugpull",
+      "title": "Whistleblower: Inside a VC Rug Pull",
+      "date": "2024-01-10",
+      "author": "Anonymous",
+      "status": "live",
+      "category": "Whistleblower",
+      "readingTime": "15 min read",
+      "content": "..."
+    }
+  ]
+}

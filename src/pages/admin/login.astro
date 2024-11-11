@@ -1,0 +1,101 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { isAuthenticated } from '../../utils/auth';
+
+if (isAuthenticated(Astro)) {
+  return Astro.redirect('/admin');
+}
+
+const error = Astro.url.searchParams.get('error');
+---
+
+<Layout title="Login | collectif admin">
+  <main class="login-page">
+    <form class="login-form" action="/api/auth/login" method="POST">
+      <h1>Admin Login</h1>
+      
+      {error && <div class="error-message">Invalid credentials</div>}
+      
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      
+      <button type="submit">Login</button>
+    </form>
+  </main>
+</Layout>
+
+<style>
+  .login-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+  }
+
+  .login-form {
+    background: var(--secondary);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid var(--accent);
+  }
+
+  h1 {
+    color: var(--accent);
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    background: var(--background);
+    border: 1px solid var(--accent);
+    color: var(--text);
+    font-family: 'Space Mono', monospace;
+  }
+
+  button {
+    width: 100%;
+    padding: 1rem;
+    background: var(--accent);
+    color: var(--background);
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Space Mono', monospace;
+  }
+
+  button:hover {
+    background: var(--accent-dark);
+    box-shadow: 0 0 15px var(--accent);
+  }
+
+  .error-message {
+    background: var(--danger);
+    color: white;
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+</style>
